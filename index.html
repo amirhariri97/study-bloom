@@ -8,7 +8,6 @@
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fff1f2'/%3E%3Cg fill='none' stroke='%23f472b6' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath fill='%23fde7f3' d='M32 18c4 6 6 12 6 18 0 4-3 7-6 7s-6-3-6-7c0-6 2-12 6-18Z'/%3E%3Cpath fill='%23fbcfe8' d='M32 22c-7 4-11 10-11 16 0 4 3 7 7 7 2 0 4-1 4-3 0-7 0-13 0-20Z'/%3E%3Cpath fill='%23f9a8d4' d='M32 22c7 4 11 10 11 16 0 4-3 7-7 7-2 0-4-1-4-3 0-7 0-13 0-20Z'/%3E%3Cpath fill='%23fce7f3' d='M24 27c-8 2-13 7-13 13 0 4 3 7 7 7 4 0 8-2 10-5 1-2 0-9-4-15Z'/%3E%3Cpath fill='%23fbcfe8' d='M40 27c8 2 13 7 13 13 0 4-3 7-7 7-4 0-8-2-10-5-1-2 0-9 4-15Z'/%3E%3Cpath d='M32 45v8'/%3E%3Cpath d='M24 53c3-2 5-3 8-3s5 1 8 3'/%3E%3C/g%3E%3C/svg%3E" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap');
-
     :root {
       --bg-color: #fdf2f8;
       --card-bg: #ffffff;
@@ -20,10 +19,8 @@
       --accent-lavender: #e9d5ff;
       --accent-gold: #f59e0b;
       --shadow: 0 10px 40px rgba(244, 114, 182, 0.12);
-      --success: #10b981;
       --danger: #7c3aed;
     }
-
     * { box-sizing: border-box; }
     body {
       background-color: var(--bg-color);
@@ -36,7 +33,6 @@
       margin: 0;
       padding: 20px;
     }
-
     .game-container {
       background-color: var(--card-bg);
       padding: 35px 25px;
@@ -46,7 +42,6 @@
       width: 100%;
       text-align: center;
     }
-
     h1 {
       margin-top: 0;
       margin-bottom: 10px;
@@ -55,7 +50,6 @@
       font-size: 26px;
       font-weight: 700;
     }
-
     h2 {
       margin-top: 0;
       font-size: 12px;
@@ -65,74 +59,16 @@
       letter-spacing: 1.5px;
       margin-bottom: 10px;
     }
-
-    .logo-lotus {
-      width: 52px;
-      height: 52px;
-      margin: 0 auto 10px;
-      color: var(--accent-rose);
-    }
-
-    .subtitle {
-      font-size: 13px;
-      color: var(--text-dim);
-      margin: 0 0 18px;
-      font-weight: 700;
-    }
-
-    .stats {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      font-weight: 700;
-      font-family: 'Quicksand', sans-serif;
-    }
-
+    .logo-lotus { width: 52px; height: 52px; margin: 0 auto 10px; color: var(--accent-rose); }
+    .subtitle { font-size: 13px; color: var(--text-dim); margin: 0 0 18px; font-weight: 700; }
+    .stats { display: flex; justify-content: space-between; margin-bottom: 12px; font-weight: 700; font-family: 'Quicksand', sans-serif; }
     .coin-color { color: var(--accent-gold); }
-
-    .xp-container {
-      background-color: #f3f4f6;
-      border-radius: 50px;
-      height: 10px;
-      width: 100%;
-      margin-bottom: 30px;
-      overflow: hidden;
-    }
-
-    .xp-bar {
-      background: linear-gradient(90deg, var(--accent-pink), var(--accent-rose));
-      height: 100%;
-      width: 0%;
-      transition: width 0.5s ease, background 0.4s ease;
-      border-radius: 50px;
-    }
-
-    .xp-bar.debt {
-      background: linear-gradient(90deg, var(--accent-lavender), #c084fc);
-    }
-
-    #settings-area {
-      transition: opacity 0.3s, max-height 0.3s, margin 0.3s;
-      overflow: hidden;
-      max-height: 300px;
-      opacity: 1;
-    }
-
-    #settings-area.hidden {
-      opacity: 0;
-      max-height: 0;
-      margin: 0;
-      padding: 0;
-    }
-
-    .pill-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
+    .xp-container { background-color: #f3f4f6; border-radius: 50px; height: 10px; width: 100%; margin-bottom: 30px; overflow: hidden; }
+    .xp-bar { background: linear-gradient(90deg, var(--accent-pink), var(--accent-rose)); height: 100%; width: 0%; transition: width 0.5s ease, background 0.4s ease; border-radius: 50px; }
+    .xp-bar.debt { background: linear-gradient(90deg, var(--accent-lavender), #c084fc); }
+    #settings-area { transition: opacity 0.3s, max-height 0.3s, margin 0.3s; overflow: hidden; max-height: 300px; opacity: 1; }
+    #settings-area.hidden { opacity: 0; max-height: 0; margin: 0; padding: 0; }
+    .pill-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 20px; }
     .pill {
       background-color: var(--accent-cream);
       color: var(--accent-rose);
@@ -147,28 +83,10 @@
       width: auto;
       transition: all 0.2s;
     }
-
     .pill:hover { background-color: #fce7f3; }
-    .pill.active {
-      background: linear-gradient(90deg, var(--accent-pink), var(--accent-rose));
-      color: white;
-    }
-
-    .timer-display {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 56px;
-      font-weight: 700;
-      margin: 10px 0;
-      letter-spacing: 2px;
-    }
-
-    .quest-name {
-      color: var(--accent-rose);
-      font-weight: 700;
-      margin-bottom: 25px;
-      font-size: 15px;
-    }
-
+    .pill.active { background: linear-gradient(90deg, var(--accent-pink), var(--accent-rose)); color: white; }
+    .timer-display { font-family: 'Quicksand', sans-serif; font-size: 56px; font-weight: 700; margin: 10px 0; letter-spacing: 2px; }
+    .quest-name { color: var(--accent-rose); font-weight: 700; margin-bottom: 25px; font-size: 15px; }
     button {
       width: 100%;
       padding: 16px;
@@ -181,59 +99,16 @@
       margin-bottom: 10px;
       transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
     }
-
     button:active { transform: scale(0.97); }
     button:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
-
-    .btn-start {
-      background: linear-gradient(90deg, var(--accent-pink), var(--accent-rose));
-      color: white;
-      box-shadow: 0 6px 20px rgba(244, 114, 182, 0.3);
-    }
-
+    .btn-start { background: linear-gradient(90deg, var(--accent-pink), var(--accent-rose)); color: white; box-shadow: 0 6px 20px rgba(244, 114, 182, 0.3); }
     .btn-start:hover:not(:disabled) { box-shadow: 0 8px 25px rgba(244, 114, 182, 0.5); }
-    .btn-bailout {
-      background-color: transparent;
-      color: var(--text-dim);
-      font-size: 12px;
-      font-weight: 700;
-      margin-top: -5px;
-    }
-
+    .btn-bailout { background-color: transparent; color: var(--text-dim); font-size: 12px; font-weight: 700; margin-top: -5px; }
     .btn-bailout:hover:not(:disabled) { color: #a78bfa; }
-
-    .shop {
-      margin-top: 30px;
-      border-top: 1px solid #f3f4f6;
-      padding-top: 20px;
-    }
-
-    .shop-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      background-color: var(--accent-cream);
-      padding: 12px 16px;
-      border-radius: 16px;
-      margin-bottom: 10px;
-      text-align: left;
-    }
-
+    .shop { margin-top: 30px; border-top: 1px solid #f3f4f6; padding-top: 20px; }
+    .shop-item { display: flex; justify-content: space-between; align-items: center; gap: 10px; background-color: var(--accent-cream); padding: 12px 16px; border-radius: 16px; margin-bottom: 10px; text-align: left; }
     .shop-item span { font-size: 14px; font-weight: 700; }
-
-    .btn-buy {
-      background-color: white;
-      color: var(--accent-rose);
-      width: auto;
-      padding: 8px 16px;
-      font-size: 13px;
-      margin: 0;
-      border: 1px solid #fecdd3;
-      box-shadow: none;
-      flex-shrink: 0;
-    }
-
+    .btn-buy { background-color: white; color: var(--accent-rose); width: auto; padding: 8px 16px; font-size: 13px; margin: 0; border: 1px solid #fecdd3; box-shadow: none; flex-shrink: 0; }
     .feedback {
       position: fixed;
       top: 30px;
@@ -253,19 +128,8 @@
       max-width: calc(100vw - 24px);
       text-align: center;
     }
-
-    .feedback.bad {
-      color: var(--danger);
-      border-color: #e9d5ff;
-    }
-
-    .status-note {
-      margin-top: 16px;
-      font-size: 12px;
-      color: var(--text-dim);
-      line-height: 1.45;
-    }
-
+    .feedback.bad { color: var(--danger); border-color: #e9d5ff; }
+    .status-note { margin-top: 16px; font-size: 12px; color: var(--text-dim); line-height: 1.45; }
     @media (max-width: 420px) {
       .game-container { padding: 28px 18px; }
       .timer-display { font-size: 48px; }
@@ -276,7 +140,6 @@
 </head>
 <body>
   <div id="feedback-popup" class="feedback"></div>
-
   <div class="game-container">
     <svg class="logo-lotus" viewBox="0 0 64 64" aria-label="Lotus flower logo" role="img">
       <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -289,7 +152,6 @@
         <path d="M24 53c3-2 5-3 8-3s5 1 8 3"/>
       </g>
     </svg>
-
     <h1>✨ study bloom</h1>
     <p class="subtitle">grow from student to attending</p>
 
@@ -345,7 +207,7 @@
       </div>
     </div>
 
-    <p class="status-note">Tip: keep this file as <strong>index.html</strong> when uploading to GitHub Pages.</p>
+    <p class="status-note">This version uses a real end-time, so the countdown catches up after iPhone lock/unlock.</p>
   </div>
 
   <script>
@@ -359,7 +221,10 @@
       maxTime: 25 * 60,
       isStudying: false,
       intervalId: null,
-      currentQuest: 'pass this exam'
+      currentQuest: 'pass this exam',
+      sessionStartedAt: null,
+      endTime: null,
+      sessionResolved: false
     };
 
     const timerEl = document.getElementById('timer');
@@ -426,35 +291,60 @@
       btnStart.textContent = state.isStudying ? 'studying...' : (state.level >= state.maxLevel ? 'attending mode ✨' : 'lock in 🤍');
     }
 
+    function startTicker() {
+      clearInterval(state.intervalId);
+      state.intervalId = setInterval(syncTimer, 250);
+    }
+
+    function stopTicker() {
+      clearInterval(state.intervalId);
+      state.intervalId = null;
+    }
+
     function startStudy() {
       if (state.isStudying) return;
       state.isStudying = true;
+      state.sessionResolved = false;
+      state.sessionStartedAt = Date.now();
+      state.endTime = Date.now() + state.maxTime * 1000;
       settingsArea.classList.add('hidden');
-      updateUI();
-
-      state.intervalId = setInterval(() => {
-        state.timeLeft--;
-        if (state.timeLeft <= 0) {
-          completeSession(true);
-        } else {
-          updateUI();
-        }
-      }, 1000);
+      syncTimer();
+      startTicker();
     }
 
     function bailOut() {
       if (!state.isStudying) return;
+      syncTimer();
       completeSession(false);
     }
 
+    function syncTimer() {
+      if (!state.isStudying || !state.endTime) {
+        updateUI();
+        return;
+      }
+
+      const remainingMs = state.endTime - Date.now();
+      state.timeLeft = Math.max(0, Math.ceil(remainingMs / 1000));
+
+      if (remainingMs <= 0 && !state.sessionResolved) {
+        completeSession(true);
+        return;
+      }
+
+      updateUI();
+    }
+
     function completeSession(finished) {
-      clearInterval(state.intervalId);
-      state.intervalId = null;
+      if (state.sessionResolved) return;
+      state.sessionResolved = true;
+      stopTicker();
       state.isStudying = false;
       settingsArea.classList.remove('hidden');
 
-      const timeStudied = Math.max(0, state.maxTime - state.timeLeft);
-      const percentage = timeStudied / state.maxTime;
+      const effectiveEnd = finished ? state.endTime : Date.now();
+      const timeStudiedMs = Math.max(0, effectiveEnd - state.sessionStartedAt);
+      const percentage = Math.min(1, timeStudiedMs / (state.maxTime * 1000));
       let xpEarned = 0;
       let coinsEarned = 0;
       let message = '';
@@ -480,6 +370,8 @@
       if (state.coins < 0) state.coins = 0;
 
       state.timeLeft = state.maxTime;
+      state.sessionStartedAt = null;
+      state.endTime = null;
       updateUI();
       showFeedback(message, isBad);
     }
@@ -534,6 +426,10 @@
 
     btnStart.addEventListener('click', startStudy);
     btnBailout.addEventListener('click', bailOut);
+
+    document.addEventListener('visibilitychange', syncTimer);
+    window.addEventListener('focus', syncTimer);
+    window.addEventListener('pageshow', syncTimer);
 
     updateUI();
   </script>
